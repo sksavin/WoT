@@ -1,11 +1,11 @@
 
-.active {
+active {
    background: aqua;
 }
-.table {
+table {
     border-collapse: collapse;
     border: 2px double black;
-    background-image: url("./images/t.jpeg");
+    background-image: url("images/t.jpeg");
     background-size: cover;
 }
 th{
