@@ -1,19 +1,19 @@
 
-active {
+#active {
    background: aqua;
 }
-table {
+#table {
     border-collapse: collapse;
     border: 2px double black;
     background-image: url("images/t.jpeg");
     background-size: cover;
 }
-th{
+.th{
     padding: 5px;
     border: 1px solid black;
     color: aliceblue;
 }
-td{
+.td{
     border: 1px solid black;
     color: aliceblue;
 }
