@@ -1,0 +1,19 @@
+
+.active {
+   background: aqua;
+}
+.table {
+    border-collapse: collapse;
+    border: 2px double black;
+    background-image: url("./images/t.jpeg");
+    background-size: cover;
+}
+th{
+    padding: 5px;
+    border: 1px solid black;
+    color: aliceblue;
+}
+td{
+    border: 1px solid black;
+    color: aliceblue;
+}

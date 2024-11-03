@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Решение алгоритмической задачи</title>
+</head>
+<body>
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href='../index.html#head1' target="_self">Почему выбирают нас?</a></li> <!--ссылка на закладку -->
+            <li><a href="../index.html#head2" target="_self">Новости индустрии</a></li>
+            <!-- ссылка на внешний сайт  -->
+            <li><a href="https://www.kinopoisk.ru/lists/movies/top_100_horrors_by_best_horror_movies/?utm_referrer=www.google.com" target="_blank">Топ-100 фильмов по версии Best Horror Movies</a></li>
+            <li><a href='../hystory.html' target="_self"><img height="20px" src="../images/skeleton.png"></a> </li>
+            <li><a href="./form.html" target="_self">Форма обратной связи</a></li>
+            <li><a href="./index.html#regform">Регистрация на следующую встречу</a></li>
+            <li><a href="./ap.html" target="_self">Решение алгоритмической задачи</a></li>
+            <li><a href="./ap2.html" target="_self">Описание решения алгоритмической задачи</a></li>
+            <li><a href="./passport.html" target="_self">Паспорт</a></li>
+            <li><a href="./DOM_JS.html" target="_self">DOM_JS</a></li>
+        </ul>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const navigationLinks = document.querySelectorAll('.navigation a');
+    const currentPathname = window.location.pathname;
+
+    navigationLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPathname || link.getAttribute('href') + '/' === currentPathname) {
+            link.classList.add('active');
+        }
+    });
+});
+    </script>
+
+            <h3 align="center">Решение алгоритмической задачи</h3>
+            <p id="task_content">1010. Дано число X. Определить, принадлежит ли это число заданному промежутку [a, b].</p>
+            <p>Значение A: <span id="a">22</span></p>
+            <p>Значение B: <span id="b">20</span></p>
+            <p>Значение X: <span id="x">33</span></p>
+            <button id="verify">Оценить</button> 
+
+            <p>Результат: <span id="result"></span></p>
+
+            <button><a href="./ap2.html">Описание решения алгоритмической задачи</a></button><br>
+            
+            
+            <a href="./index.html#top">На главную</a>
+
+</body>
+<script>
+    function verify() {
+    console.log("a, b, x")
+    let a = parseInt(elementA.innerText);
+    let b = parseInt(elementB.innerText);
+    let x = parseInt(elementX.innerText);
+    console.log(a, b, x)
+
+    let low, high
+    if (a < b) {
+        low = a;
+        high = b;
+    }
+    else {
+        low = b;
+        high = a;
+    }
+
+    if (x >= low && x <= high) {
+        result = " X принадлежит заданному диапазону"
+        document.getElementById("result").innerText =  result;
+    } else {
+        result = " X не принадлежит заданному диапазону"
+        document.getElementById("result").innerText =  result;
+    }
+}
+
+const elementA = document.getElementById("a");
+const elementB = document.getElementById("b");
+const elementX = document.getElementById("x");
+
+const elementVerify = document.getElementById("verify");
+elementVerify.addEventListener('click', verify);
+</script>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма обратной связи</title>
+</head>
+
+<html>
+<body>
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href='../index.html#head1' target="_self">Почему выбирают нас?</a></li> <!--ссылка на закладку -->
+            <li><a href="../index.html#head2" target="_self">Новости индустрии</a></li>
+            <!-- ссылка на внешний сайт  -->
+            <li><a href="https://www.kinopoisk.ru/lists/movies/top_100_horrors_by_best_horror_movies/?utm_referrer=www.google.com" target="_blank">Топ-100 фильмов по версии Best Horror Movies</a></li>
+            <li><a href='../hystory.html' target="_self"><img height="20px" src="../images/skeleton.png"></a> </li>
+            <li><a href="./form.html" target="_self">Форма обратной связи</a></li>
+            <li><a href="./index.html#regform">Регистрация на следующую встречу</a></li>
+            <li><a href="./ap.html" target="_self">Решение алгоритмической задачи</a></li>
+            <li><a href="./ap2.html" target="_self">Описание решения алгоритмической задачи</a></li>
+            <li><a href="./passport.html" target="_self">Паспорт</a></li>
+            <li><a href="./DOM_JS.html" target="_self">DOM_JS</a></li>
+        </ul>
+    </nav>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const navigationLinks = document.querySelectorAll('.navigation a');
+    const currentPathname = window.location.pathname;
+
+    navigationLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPathname || link.getAttribute('href') + '/' === currentPathname) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
+<h3 align="center">Поделись мнением о последнем фильме ужасов, который ты смотрел!</h3>
+<form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+    <p>Для нас:<input type="hidden"  name="q" value="search"></p>
+    <p>Имя Фамилия: <input type="Text" name="name_lastname" size=20  value="Илья Родионов"></p>
+    <p>Возраст: <input type="Number" name="age" size=20 value="22"></p>
+    <p>Откуда ты:
+        <input type="Text" name="place" value="Москва">
+    </p>
+    <p>Что за фильм? <input tupe="Text" name="film" value="Астрал 2"></p>
+    <p>Твоя общая оценка фильму
+        <input type="Radio" name="score" value="1" unchecked >1
+        <input type="Radio" name="score" value="2" unchecked >2
+        <input type="Radio" name="score" value="3" unchecked >3
+        <input type="Radio" name="score" value="4" unchecked >4
+        <input type="Radio" name="score" value="5" unchecked >5
+        <input type="Radio" name="score" value="6" unchecked >6
+        <input type="Radio" name="score" value="7" checked >7
+        <input type="Radio" name="score" value="8" unchecked >8
+        <input type="Radio" name="score" value="9" unchecked >9
+        <input type="Radio" name="score" value="10" unchecked >10
+    </p>
+    <p>Что не понравилось?
+        <input type="Checkbox" name="experience"  value="10" unchecked>Спецэффекты
+        <input type="Checkbox"  name="experience"   value="20" checked>Сюжет
+        <input type="Checkbox" name="experience" value="30" checked>Игра актеров
+        <input type="Checkbox" name="experience"  value="10" unchecked>Атмосфера
+        <input type="Checkbox" name="experience"  value="10" checked>Звуковое сопровождение
+        <input type="Checkbox" name="experience"  value="10" unchecked>Визуал
+    </p>
+
+    <p>Порекомендовал ли друзьям?
+        <select name="recomendation">
+            <OPTION value="Определенно да! Один из лучших фильмов: которые я видел">Определенно да! Один из лучших фильмов: которые я видел</OPTION>
+            <OPTION value="Нет, не стоит потраченного времени">Нет, не стоит потраченного времени</OPTION>
+        </select>
+    </p>
+
+    <p> Напиши общий отзыв:
+        <br>
+        <TEXTAREA cols=80 rows=4 name="textarea" >Писать отзыв тут</TEXTAREA>
+    </p>
+
+    <p>Когда смотрел? <input type="date" name="user_date"  value='2023-11-11'></p>
+    <p>Пароль, для создания аккаунта на нашем форуме: <input type="Password" name="password" size=9  value="12345678"></p>
+
+    <p>Название файла: <input type="Техт" name="000_file_name" value="Feedback_Rodionov.txt" size='30'></p>
+
+    <p> Тип записи в файл:<select name="010_mode">
+        <OPTION value="a">дозаписать в файл</OPTION>
+        <OPTION value="w">очисить файл и записать в файл</OPTION>
+    </select></p>
+
+    <input type="hidden" name="function"  value="page">
+    <input type="hidden" name="page_id"  value="3">
+
+    <p>
+        <input type="Reset"  name="Reset"  value="Обновить">
+        <input type="Submit" name="Submit"  value="Отправить">
+    </p>
+
+    <a href="./index.html#top">На главную</a>
+</form>
+</body>
+</html>
