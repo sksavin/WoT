@@ -19,23 +19,12 @@
         <li><a href="./form.html" target="_self">Форма обратной связи</a></li>
         <li><a href="./index.html#regform">Регистрация на следующую встречу</a></li>
         <li><a href="./ap.html" target="_self">Решение алгоритмической задачи</a></li>
-        <li><a href="./ap2.html" target="_self">Описание решения алгоритмической задачи</a></li>
+        <li><a href="./ap2.html" target="_self"><b>Описание решения алгоритмической задачи<b></a></li>
         <li><a href="./passport.html" target="_self">Паспорт</a></li>
         <li><a href="./DOM_JS.html" target="_self">DOM_JS</a></li>
     </ul>
 </nav>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const navigationLinks = document.querySelectorAll('.navigation a');
-    const currentPathname = window.location.pathname;
 
-    navigationLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPathname || link.getAttribute('href') + '/' === currentPathname) {
-            link.classList.add('active');
-        }
-    });
-});
-</script>
     <p name="formulation">1010. Дано число X. Определить, принадлежит ли это число заданному промежутку [a, b]. Если принадлежит - отправить все на сервер</p>
     <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
         <ul>
