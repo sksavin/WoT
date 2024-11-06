@@ -16,7 +16,7 @@
         <!-- ссылка на внешний сайт  -->
         <li><a href="https://www.kinopoisk.ru/lists/movies/top_100_horrors_by_best_horror_movies/?utm_referrer=www.google.com" target="_blank">Топ-100 фильмов по версии Best Horror Movies</a></li>
         <li><a href='hystory.html' target="_self"><img height="20px" src="images/skeleton.png"></a> </li>
-        <li><a href="./form.html" target="_self">Форма обратной связи</a></li>
+        <li><a href="./form.html" target="_self"><b>Форма обратной связи</b></a></li>
         <li><a href="./index.html#regform">Регистрация на следующую встречу</a></li>
         <li><a href="./ap.html" target="_self">Решение алгоритмической задачи</a></li>
         <li><a href="./ap2.html" target="_self">Описание решения алгоритмической задачи</a></li>
@@ -24,18 +24,7 @@
         <li><a href="./DOM_JS.html" target="_self">DOM_JS</a></li>
     </ul>
 </nav>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const navigationLinks = document.querySelectorAll('.navigation a');
-    const currentPathname = window.location.pathname;
 
-    navigationLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPathname || link.getAttribute('href') + '/' === currentPathname) {
-            link.classList.add('active');
-        }
-    });
-});
-</script>
 <h3 align="center">Поделись мнением о последнем фильме ужасов, который ты смотрел!</h3>
 <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
     <p>Для нас:<input type="hidden"  name="q" value="search"></p>
