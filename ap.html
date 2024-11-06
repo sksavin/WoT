@@ -22,19 +22,7 @@
         <li><a href="./DOM_JS.html" target="_self">DOM_JS</a></li>
     </ul>
 </nav>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const navigationLinks = document.querySelectorAll('.navigation a');
-    const currentPathname = window.location.pathname;
-
-    navigationLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPathname || link.getAttribute('href') + '/' === currentPathname) {
-            link.classList.add('active');
-        }
-    });
-});
-    </script>
-
+    
             <h3 align="center">Решение алгоритмической задачи</h3>
             <p id="task_content">1010. Дано число X. Определить, принадлежит ли это число заданному промежутку [a, b].</p>
             <p>Значение A: <span id="a">22</span></p>
